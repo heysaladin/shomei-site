@@ -1,65 +1,676 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/5.3.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/5.3.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/5.3.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/5.3.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/5.3.0/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Didin dan Mei</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">
+   <link rel="stylesheet" href="css/vendor.css">  
+   <link rel="stylesheet" href="css/main.css">  
 
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+   <!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+	<!-- header 
+   ================================================== -->
+   <header> 
+
+   	<div class="header-logo">
+	      <a href="index.html">Didin dan Mei</a>
+	   </div> 
+
+		<a id="header-menu-trigger" href="#0">
+		 	<span class="header-menu-text">Menu</span>
+		  	<span class="header-menu-icon"></span>
+		</a> 
+
+		<nav id="menu-nav-wrap">
+
+			<a href="#0" class="close-button" title="close"><span>Close</span></a>	
+
+	   	<h3>Didin dan Mei.</h3>  
+
+			<ul class="nav-list">
+				<li class="current"><a class="smoothscroll" href="#home" title="">Beranda</a></li>
+				<li><a class="smoothscroll" href="#about" title="">Tentang</a></li>
+				<li><a class="smoothscroll" href="#services" title="">Undangan</a></li>
+				<li><a class="smoothscroll" href="#portfolio" title="">Foto</a></li>		
+				<li><a class="smoothscroll" href="#testimonials" title="">Ucapan</a></li>			
+			</ul>
+
+			<ul class="header-social-list">
+	         <li>
+	         	<a href="https://www.facebook.com/didien.geonk"><i class="fa fa-facebook-square"></i></a>
+	         </li>
+	         <li>
+	         	<a href="https://www.instagram.com/saladinid/"><i class="fa fa-instagram"></i></a>
+	         </li>         
+	      </ul>		
+
+		</nav>  <!-- end #menu-nav-wrap -->
+
+	</header> <!-- end header -->  
+
+
+   <!-- home
+   ================================================== -->
+   <section id="home">
+
+   	<div class="overlay"></div>
+
+   	<div class="home-content-table">	
+		   <div class="home-content-tablecell">
+		   	<div class="row">
+		   		<div class="col-twelve">		   			
+			  		
+			  				<h3 class="animate-intro">Didin dan Mei.</h3>
+				  			<h1 class="animate-intro">
+							Kami Berbeda  <br>
+							tapi Disatukan.
+				  			</h1>	
+
+				  			<div class="more animate-intro">
+				  				<a class="smoothscroll button stroke" href="#about">
+				  					Telusuri
+				  				</a>
+				  			</div>							
+
+			  		</div> <!-- end col-twelve --> 
+		   	</div> <!-- end row --> 
+		   </div> <!-- end home-content-tablecell --> 		   
+		</div> <!-- end home-content-table -->
+
+		<ul class="home-social-list">
+	      <li class="animate-intro">
+	        	<a href="https://www.facebook.com/didien.geonk"><i class="fa fa-facebook-square"></i></a>
+	      </li>
+	      <li class="animate-intro">
+	        	<a href="https://www.instagram.com/saladinid/"><i class="fa fa-instagram"></i></a>
+	      </li>     
+	   </ul> <!-- end home-social-list -->	
+
+		<div class="scrolldown">
+			<a href="#about" class="scroll-icon smoothscroll">		
+		   	Ke bawah		   	
+		   	<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+			</a>
+		</div>			
+   
+   </section> <!-- end home -->
+
+
+   <!-- about
+   ================================================== -->
+   <section id="about">
+
+   	<div class="row about-wrap">
+   		<div class="col-full">
+
+   			<div class="about-profile-bg"></div>
+
+				<div class="intro">
+					<h3 class="animate-this">Sekilas Tentang Kami</h3>
+					<p class="lead animate-this" style="font-size: 3rem;"><span>Didin & Mei,</span> itulah kami yang memiliki banyak sekali perbedaan,
+					mulai dari sifat, sikap, hobi, kegiatan dan lain-lain. Namun dari perbedaan itulah kami merasa saling melengkapi.
+					<p class="lead animate-this" style="margin-top: 0rem;">
+					Cinta tak harus memiliki segala hal yang sama. Karena inti dari cinta untuk menggenapi dan saling melengkapi.
+					</p>
+					</p>	
+				</div>   
+
+   		</div> <!-- end col-full  -->
+   	</div> <!-- end about-wrap  -->
+
+   </section> <!-- end about -->
+
+
+   <!-- about
+   ================================================== -->
+   <section id="services">
+
+   	<div class="overlay"></div>
+   	<div class="gradient-overlay"></div>
+   	
+   	<div class="row narrow section-intro with-bottom-sep animate-this" style="padding-bottom: 1.2rem;">
+   		<div class="col-full">
+   			
+   				<h3>Undangan</h3>
+				  <h1>Walimatul Ursy.</h1>
+
+				  <span class="icon">
+						<!-- <i class="icon-paint-brush"></i> -->
+						<img src="images/leaf.png" alt="Author image" style="width: 100px;">
+					  </span>    
+				  
+					  <div class="service-content" style="margin: 25px auto;">
+				  <h3 class="">Assalamu’alaikum Wr. Wb.</h3>
+				</div>
+   			
+   			   <p class="lead">
+				Dengan memohon Rahmat dan Ridho Allah SWT,
+				kami bermaksud menyelenggarakan Walimatul Ursy Pernikahan anak kami,				
+				  </p>
+   			
+   	   </div> <!-- end col-full -->
+   	</div> <!-- end row -->
+
+   	<div class="row services-content">
+
+   		<div class="services-list block-1-1 block-tab-full group" style="display: flex;">
+
+	      	<div class="bgrid service-item animate-this" style="margin: 0 auto;">	
+
+	      		<!-- <span class="icon">
+					  <i class="icon-paint-brush"></i>
+					  <img src="images/leaf.png" alt="Author image">
+					</span>             -->
+
+	            <div class="service-content" style="margin: 0 auto;">
+	            	<h1 class="" style="margin-bottom: 10px; font-family: 'librebaskerville-bold', serif;
+					font-size: 3.8rem;
+					line-height: 1.375;
+					font-style: italic;
+					color: #8d7249;">Mei Yuana Afifah</h1>
+	            	<h3 class="h05" style="color: rgba(242, 242, 242, 0.4);">Putri Bapak SUTARTO & Ibu ASRIATI - Blitar</h3>
+
+		            <p>
+							 Dengan
+					</p>	
+					 
+	            	<h1 class="" style="margin-bottom: 10px; font-family: 'librebaskerville-bold', serif;
+					font-size: 3.8rem;
+					line-height: 1.375;
+					font-style: italic;
+					color: #8d7249;">M. Sholahuddin</h1>
+					<h3 class="h05" style="color: rgba(242, 242, 242, 0.4);">Putra Bapak MUNTAHA & Ibu MURYATI - Tuban</h3>
+					
+					 <p class="lead" style="margin: 15px auto;">
+						Insya Allah akan dilaksanakan pada:
+						<br/>
+						Hari : <span style="color: white;">Jum’at</span>
+						<br/>
+						Tanggal : <span style="color: white;">31 Agustus 2018</span>
+						<br/>
+						Pukul : <span style="color: white;">13.00 WIB</span>
+						<br/>
+						Tempat : <span style="color: white;">Kediaman Bpk. Sutarto</span>
+						<br/>
+						<span style="color: white;">Jl. Birawa No 1 RT 7 RW 3 Kel. Jegu, Kec. Sutojayan Kab. Blitar</span>
+					</p>
+
+	         	</div> 	         	 
+
+			</div> <!-- end bgrid -->	
+
+		</div> <!-- end services-list -->
+		
+		
+<div style="margin: 40px auto;
+min-height: 500px;">
+		<div class="col-twelve" id="map" style="height: 400px; margin: 0 auto;"></div>
+		<div class="col-twelve" id="route" style="height: 50px; margin: 25px auto 0; position: relative;">
+			<a class="button stroke" style="position: relative; color: white; border: 3px solid #fff;" href="http://maps.google.com/maps?daddr=-8.149184,112.235628&saddr=">
+				Lihat Rute                                  
+			</a>
+		</div>
+	</div>
+	
+
+		<div class="services-list block-1-1 block-tab-full group" style="display: block;">
+
+				<div class="bgrid service-item animate-this" style="margin: 0 auto;">
+
+		<p class="lead" id="closing">
+				Merupakan suatu kehormatan dan kebahagiaan bagi Kami, apabila Bapak/Ibu//Saudara(i) berkenan hadir untuk memberikan do’a restunya kepada anak kami. Atas kehadiran dan do’a restu Bapak/Ibu/Saudara(i), Kami sampaikan banyak terima aksih.				
+				  </p>
+				  <style>
+				 .lead#closing::after {
+    display: inline-block;
+    height: 1px;
+    width: 200px;
+    background-color: rgba(242, 242, 242, 0.1);
+    text-align: center;
+} 
+				  </style>
+				  <div class="section-intro">
+		<div class="service-content" style="margin: 25px auto;">
+				<h3 class="">Wassalamu’alaikum Wr. Wb.</h3>
+			  </div>
+			</div>
+
+		<p>
+				Bpk. Sutarto Sekeluarga
+	   </p>	
+	
+	</div> 	         	 
+
+	</div>
+   		
+   	</div> <!-- end services-content -->
+
+   </section> <!-- end services -->
+
+
+   <!-- portfolio
+   ================================================== -->
+   <section id="portfolio">
+   	
+   	<div class="intro-wrap">
+
+   		<div class="row narrow section-intro with-bottom-sep animate-this">
+	   		<div class="col-twelve">
+	   			<h3>Foto</h3>
+		   		<h1>Cerita tentang Kami.</h1>  			
+		   		
+		   		<!-- <p class="lead">Foto kenangan kami.</p>	   			 -->
+	   		</div>   		
+	   	</div> <!-- end row section-intro -->   		
+
+   	</div> <!-- end intro-wrap -->   	
+
+   	<div class="row portfolio-content">
+   		<div class="col-twelve">
+   			<div id="folio-wrap" class="bricks-wrapper">					
+
+   				<div class="brick folio-item">
+	               <div class="item-wrap animate-this" data-src="images/portfolio/photos/1.jpg" data-sub-html="#01" > 	
+	                  <a href="#" class="overlay">
+	                  	<img src="images/portfolio/photos/1.jpg" alt="Skaterboy">	                     
+	                     <div class="item-text">
+	                     	<span class="folio-types">
+		     					      Web Development
+		     					   </span>
+		     					   <h3 class="folio-title">Shutterbug</h3>	     					   
+		     					</div>                                        
+	                  </a>
+	                  <a href="https://www.behance.net/" class='details-link' title="details">
+	                  	<i class="icon-link"></i>
+	                  </a>
+	               </div> <!-- end item-wrap -->
+						
+						<div id="01" class='hide'>
+							<h4>Shutterbug</h4>
+							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
+						</div>
+	        		</div> <!-- end folio-item -->
+
+	        		<div class="brick folio-item">
+	               <div class="item-wrap animate-this" data-src="images/portfolio/photos/2.jpg" data-sub-html="#02"> 	
+	                  <a href="#" class="overlay">
+	                  	<img src="images/portfolio/photos/2.jpg" alt="Shutterbug">	                     
+	                     <div class="item-text">
+	                     	<span class="folio-types">
+		     					      Marketing
+		     					   </span>
+		     					   <h3 class="folio-title">Yellow Wall</h3>  	     					   
+		     					</div>                                        
+	                  </a>
+	                  <a href="https://www.behance.net/" class='details-link' title="details">
+	                  	<i class="icon-link"></i>
+	                  </a>
+	               </div> <!-- end item-wrap -->
+
+	               <div id="02" class='hide'>
+							<h4>Yellow Wall</h4>
+							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
+						</div>	               
+	        		</div> <!-- end folio-item -->
+
+	        		<div class="brick folio-item">
+	               <div class="item-wrap animate-this" data-src="images/portfolio/photos/3.jpg" data-sub-html="#03" >   	
+	                  <a href="#" class="overlay">
+	                  	<img src="images/portfolio/photos/3.jpg" alt="Explore">	                     
+	                     <div class="item-text">	                     		     					    
+		     					   <span class="folio-types">
+		     					      Web Design
+		     					   </span>
+		     					   <h3 class="folio-title">Architecture</h3>
+		     					</div>                                        
+	                  </a>
+	                  <a href="https://www.behance.net/" class='details-link' title="details">
+	                  	<i class="icon-link"></i>
+	                  </a>
+	               </div> <!-- end item-wrap -->	
+
+	               <div id="03" class='hide'>
+							<h4>Architecture</h4>
+							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
+						</div>               
+	        		</div> <!-- end folio-item -->
+
+					<div class="brick folio-item">
+	               <div class="item-wrap animate-this"  data-src="images/portfolio/photos/4.jpg"  data-sub-html="#04" >
+	                  <a href="#" class="overlay">
+	                  	<img src="images/portfolio/photos/4.jpg" alt="Minimalismo">	                     
+	                     <div class="item-text">	     					    
+		     					   <span class="folio-types">
+		     					      Web Design
+		     					   </span>
+		     					   <h3 class="folio-title">Minimalismo</h3>
+		     					</div>                                        
+	                  </a>
+	                  <a href="https://www.behance.net/" class='details-link' title="details">
+	                  	<i class="icon-link"></i>
+	                  </a>
+	               </div> <!-- end item-wrap -->
+
+	               <div id="04" class='hide'>
+							<h4>Minimalismo</h4>
+							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
+						</div>  	               
+	        		</div> <!-- end folio-item -->
+
+	        		<div class="brick folio-item">
+	               <div class="item-wrap animate-this" data-src="images/portfolio/photos/5.jpg" data-sub-html="#03" >   	
+	                  <a href="#" class="overlay">
+	                  	<img src="images/portfolio/photos/5.jpg" alt="Explore">	                     
+	                     <div class="item-text">	                     		     					    
+		     					   <span class="folio-types">
+		     					      Web Design
+		     					   </span>
+		     					   <h3 class="folio-title">Architecture</h3>
+		     					</div>                                        
+	                  </a>
+	                  <a href="https://www.behance.net/" class='details-link' title="details">
+	                  	<i class="icon-link"></i>
+	                  </a>
+	               </div> <!-- end item-wrap -->	
+
+	               <div id="03" class='hide'>
+							<h4>Architecture</h4>
+							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
+						</div>               
+	        		</div> <!-- end folio-item -->
+
+					<div class="brick folio-item">
+	               <div class="item-wrap animate-this"  data-src="images/portfolio/photos/6.jpg"  data-sub-html="#04" >
+	                  <a href="#" class="overlay">
+	                  	<img src="images/portfolio/photos/6.jpg" alt="Minimalismo">	                     
+	                     <div class="item-text">	     					    
+		     					   <span class="folio-types">
+		     					      Web Design
+		     					   </span>
+		     					   <h3 class="folio-title">Minimalismo</h3>
+		     					</div>                                        
+	                  </a>
+	                  <a href="https://www.behance.net/" class='details-link' title="details">
+	                  	<i class="icon-link"></i>
+	                  </a>
+	               </div> <!-- end item-wrap -->
+
+	               <div id="04" class='hide'>
+							<h4>Minimalismo</h4>
+							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
+						</div>  	               
+	        		</div> <!-- end folio-item -->
+
+	        		<div class="brick folio-item">
+	               <div class="item-wrap animate-this" data-src="images/portfolio/photos/7.jpg" data-sub-html="#03" >   	
+	                  <a href="#" class="overlay">
+	                  	<img src="images/portfolio/photos/7.jpg" alt="Explore">	                     
+	                     <div class="item-text">	                     		     					    
+		     					   <span class="folio-types">
+		     					      Web Design
+		     					   </span>
+		     					   <h3 class="folio-title">Architecture</h3>
+		     					</div>                                        
+	                  </a>
+	                  <a href="https://www.behance.net/" class='details-link' title="details">
+	                  	<i class="icon-link"></i>
+	                  </a>
+	               </div> <!-- end item-wrap -->	
+
+	               <div id="03" class='hide'>
+							<h4>Architecture</h4>
+							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
+						</div>               
+	        		</div> <!-- end folio-item -->
+
+					<div class="brick folio-item">
+	               <div class="item-wrap animate-this"  data-src="images/portfolio/photos/8.jpg"  data-sub-html="#04" >
+	                  <a href="#" class="overlay">
+	                  	<img src="images/portfolio/photos/8.jpg" alt="Minimalismo">	                     
+	                     <div class="item-text">	     					    
+		     					   <span class="folio-types">
+		     					      Web Design
+		     					   </span>
+		     					   <h3 class="folio-title">Minimalismo</h3>
+		     					</div>                                        
+	                  </a>
+	                  <a href="https://www.behance.net/" class='details-link' title="details">
+	                  	<i class="icon-link"></i>
+	                  </a>
+	               </div> <!-- end item-wrap -->
+
+	               <div id="04" class='hide'>
+							<h4>Minimalismo</h4>
+							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
+						</div>  	               
+	        		</div> <!-- end folio-item -->
+
+					<div class="brick folio-item">
+	               <div class="item-wrap animate-this"  data-src="images/portfolio/photos/9.jpg"  data-sub-html="#05" >  	
+	                  <a href="#" class="overlay">
+	                  	<img src="images/portfolio/photos/9.jpg" alt="Bicycle">	                     
+	                     <div class="item-text">	     					    
+		     					   <span class="folio-types">
+		     					      Branding
+		     					   </span>
+		     					   <h3 class="folio-title">Skaterboy</h3>
+		     					</div>                                        
+	                  </a>
+	                  <a href="https://www.behance.net/" class='details-link' title="details">
+	                  	<i class="icon-link"></i>
+	                  </a>
+	               </div> <!-- end item-wrap -->
+
+	               <div id="05" class='hide'>
+							<h4>Skaterboy</h4>
+							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="https://www.behance.net/">Details</a></p>
+						</div>	               
+	        		</div> <!-- end folio-item -->
+	           
+					<div class="brick folio-item">
+	               <div class="item-wrap animate-this"  data-src="images/portfolio/photos/10.jpg"  data-sub-html="#06">     	
+	                  <a href="#" class="overlay">
+	                  	<img src="images/portfolio/photos/10.jpg" alt="Salad">	                     
+	                     <div class="item-text">	     					    
+		     					   <span class="folio-types">
+		     					      Branding
+		     					   </span>
+		     					   <h3 class="folio-title">Salad</h3>
+		     					</div>                                        
+	                  </a>
+	                  <a href="https://www.behance.net/" class='details-link' title="details">
+	                  	<i class="icon-link"></i>
+	                  </a>
+	               </div> <!-- end item-wrap -->
+
+	               <div id="06" class='hide'>
+							<h4>Salad</h4>
+							<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="www.behance.net">Details</a></p>
+						</div>	               
+	        		</div> <!-- end folio-item -->   				
+
+   			</div> <!-- end folio-wrap -->
+   		</div> <!-- end twelve -->
+   	</div> <!-- end portfolio-content -->   	
+
+   </section>  <!-- end portfolio -->
+
+
+   <!-- Testimonials Section
+   ================================================== -->
+   <section id="testimonials">
+
+   	<div class="row">
+   		<div class="col-twelve">
+   			<h2 class="animate-this">Ucapan Mereka.</h2>
+   		</div>   		
+   	</div>   	
+
+      <div class="row flex-container">
+    
+         <div id="testimonial-slider" class="flex-slider animate-this">
+
+            <ul class="slides">
+
+               <li>
+                  <p>
+					Selamat menempuh hidup baru adikku. Semoga kalian menjadi suami istri yang saling mencintai dan mengasihi satu sama lain. Tidak pernah mengecewakan dan selalu membahagiakan pasangan. Semoga pernikahan ini langgeng sampai ajal memisahkan kalian. Happy wedding!
+                  </p> 
+
+                  <div class="testimonial-author">
+                    	<img src="images/avatars/user-07.jpg" alt="Author image">
+                    	<div class="author-info">
+                    		Mbak Novi
+                    		<span class="position">-</span>
+                    	</div>
+                  </div>                 
+             	</li> <!-- end slide -->
+
+               <li>
+                  <p>
+					Selamat atas pernikahan kalian. Semoga Allah selalu merahmati kalian dan selalu diberikan cahaya kebahagian dan secepatnya diberikan keturunan yang soleh dan solehah.
+                  </p>
+
+               	<div class="testimonial-author">
+                    	<img src="images/avatars/user-06.jpg" alt="Author image">
+                    	<div class="author-info">
+                    		Mas Idos
+                    		<span>-</span>
+                    	</div>
+                  </div>                                         
+               </li> <!-- end slide -->
+
+            </ul> <!-- end slides -->
+
+         </div> <!-- end testimonial-slider -->         
+        
+      </div> <!-- end flex-container -->
+
+   </section> <!-- end testimonials -->
+
+
+	<!-- footer
+   ================================================== -->
+	<footer>
+     	<div class="footer-main">
+
+   		<div class="row">  
+
+	      	<div class="col-twelve tab-full footer-about">
+
+				<!-- <p>Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Proin eget tortor risus.</p>	             -->
+				
+				<img style="display: block; margin: 0 auto;" src="images/mdr.png" alt="Author image"/>
+
+		      </div> <!-- end footer-about -->    	    
+
+	      </div> <!-- end row -->
+
+   	</div> <!-- end footer-main -->
+
+   	<div class="footer-bottom">
+
+      	<div class="row">
+
+      		<div class="col-twelve">
+	      		<div class="copyright">
+		         	<span>© Copyright shomei</span> 
+		         	<span>2018</a></span>		         	
+		         </div>		               
+	      	</div>
+
+      	</div>   	
+
+      </div> <!-- end footer-bottom -->
+
+      <div id="go-top">
+		   <a class="smoothscroll" title="Back to Top" href="#top">
+		   	<i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+		   </a>
+		</div>		
+   </footer>
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
+   <script>
+	   function myMap() {
+			var myLatLng = {lat: -8.149184, lng: 112.235628};
+			var mapOptions = {
+				center: myLatLng,
+				zoom: 10,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			}
+			var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+			var marker = new google.maps.Marker({
+				position: myLatLng,
+				map: map,
+				title: 'Rumah Bpk. Sutarto'
+			});
+		}
+   	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+   <!--
+   <script>
+		function initMap() {
+
+		  var myLatLng = {lat: -8.149184, lng: 112.235628};
+  
+		  var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 4,
+			center: myLatLng,
+        	mapTypeId: google.maps.MapTypeId.ROADMAP
+		  });
+  
+		  var marker = new google.maps.Marker({
+			position: myLatLng,
+			map: map,
+			title: 'Rumah Bpk. Sutarto'
+		  });
+
+		}
+	  </script>
+	  <script 
+	  	async 
+	  	defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDe048Y3K5pJEsZa7cWNjRSjdFVxKHEPP8&callback=initMap"
+	  >
+	  </script>
+	  -->
+
+</body>
+
 </html>
