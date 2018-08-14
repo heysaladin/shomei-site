@@ -1512,7 +1512,6 @@ header .header-logo a {
 #home {
   width: 100%;
   height: inherit;
-  min-height: inherit;
   background-color: #151515;
   background-image: url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
@@ -1521,18 +1520,17 @@ header .header-logo a {
   -moz-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
-  /* min-height: 804px; */
+  min-height: 804px;
   position: relative;
 }
 #home .overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   width: 100%;
   height: inherit;
-  min-height: inherit;
   opacity: .2;
   background-color: #19191b;
 }
