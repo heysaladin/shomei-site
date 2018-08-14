@@ -1522,6 +1522,13 @@ header .header-logo a {
   background-attachment: fixed;
   min-height: 804px;
   position: relative;
+  background: url(../images/hero-bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
 }
 #home .overlay {
   position: absolute;
