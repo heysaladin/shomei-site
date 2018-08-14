@@ -1255,6 +1255,7 @@ header .header-logo {
   transition: all 1s ease-in-out;
 }
 header .header-logo a {
+  margin-top: -15px;
   display: block;
   margin: 0;
   padding: 0;
