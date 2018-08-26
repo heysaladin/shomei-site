@@ -76,7 +76,8 @@ body {
  * links - (_document-setup) 
  * ------------------------------------------------------------------- */
 a, a:visited {
-  color: #07617d;
+  /* color: #07617d; */
+  color: #8d7249;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -332,7 +333,8 @@ ul.disc li::before {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #07617d;
+  /* background: #07617d; */
+  background: #8d7249;
   position: absolute;
   left: -17px;
   top: 11px;
@@ -341,7 +343,8 @@ ul.disc li::before {
 
 dt {
   margin: 0;
-  color: #07617d;
+  /* color: #07617d; */
+  color: #8d7249;
 }
 
 dd {
@@ -471,7 +474,7 @@ td:last-child {
 }
 
 .pace .pace-progress {
-  background: #f9a828;
+  background: #8d7249;
   position: fixed;
   z-index: 900;
   top: 0;
@@ -510,7 +513,7 @@ td:last-child {
   margin-left: -30px;
   margin-top: -30px;
   padding: 0;
-  background-color: #f9a828;
+  background-color: #8d7249;
   border-radius: 100%;
   -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
   animation: sk-scaleout 1.0s infinite ease-in-out;
@@ -811,8 +814,8 @@ button.stroke.large, .button.stroke.large {
 }
 
 button.stroke:hover, .button.stroke:hover {
-  border: 3px solid #f9a828;
-  color: #f9a828;
+  border: 3px solid #8d7249;
+  color: #8d7249;
 }
 
 button::-moz-focus-inner,
@@ -998,7 +1001,8 @@ input::-moz-focus-inner {
   color: #252525;
 }
 .stats-tabs li a:hover {
-  color: #07617d;
+  /* color: #07617d; */
+  color: #8d7249;
 }
 .stats-tabs li a em {
   display: block;
@@ -1497,6 +1501,7 @@ header .header-logo a {
     background-size: 51px 54px;
     /* height: 24px; */
     /* background-size: 51px 24px; */
+    margin-top: -15px;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -1801,13 +1806,15 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   max-width: 850px;
 }
 #about span {
-  color: #07617d;
+  /* color: #07617d;  */
+  color: #8d7249;
 }
 #about h3 {
   font-family: "montserrat-bold", sans-serif;
   font-size: 1.8rem;
   line-height: 1.667;
-  color: #07617d;
+  /* color: #07617d; */
+  color: #8d7249;
   text-transform: uppercase;
   letter-spacing: .3rem;
   position: relative;
@@ -1962,7 +1969,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 }
 #services .services-list .icon i {
   font-size: 5.4rem;
-  color: #f9a828;
+  color: #8d7249;
 }
 #services .services-list .h05 {
   font-size: 1.7rem;
@@ -2026,7 +2033,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 }
 #portfolio .intro-wrap {
   padding: 15rem 0 21rem;
-  background: #111111;
+  background: #202020;
 }
 #portfolio .section-intro h3 {
   color: rgba(242, 242, 242, 0.5);
@@ -2209,7 +2216,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   padding: 12px 20% 15px;
 }
 .lg-sub-html a, .lg-sub-html a:visited {
-  color: #f9a828;
+  color: #8d7249;
 }
 .lg-sub-html a:hover, .lg-sub-html a:focus {
   color: #FFFFFF;
@@ -2241,7 +2248,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 }
 
 .lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover {
-  border-color: #f9a828;
+  border-color: #8d7249;
 }
 
 .lg-progress-bar .lg-progress {
@@ -2287,7 +2294,8 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   font-family: "montserrat-bold", sans-serif;
   font-size: 1.8rem;
   line-height: 1.667;
-  color: #07617d;
+  /* color: #07617d; */
+  color: #8d7249;
   text-transform: uppercase;
   letter-spacing: .3rem;
   position: relative;
@@ -2599,7 +2607,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   padding: .6rem 2rem .6rem 2rem;
   margin: 0;
   color: #000000;
-  background: #f9a828;
+  background: #8d7249;
   border-radius: 3px;
 }
 #contact form .form-field label::after {
@@ -2609,7 +2617,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   margin-top: -6px;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 5px solid #f9a828;
+  border-bottom: 5px solid #8d7249;
   content: "";
 }
 #contact form ::-webkit-input-placeholder {
@@ -2662,12 +2670,12 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   line-height: 6rem;
   padding: 0 3rem;
   width: 100%;
-  background: #f9a828;
+  background: #8d7249;
   color: #000000;
   margin-top: .6rem;
 }
 #contact button.submitform:hover, #contact button.submitform:focus {
-  background: #f89e0f;
+  background: #8d7249;
 }
 
 #message-warning, #message-success {
@@ -2683,7 +2691,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 }
 
 #message-success {
-  color: #f9a828;
+  color: #8d7249;
 }
 
 #message-warning i,
@@ -2825,7 +2833,7 @@ footer a, footer a:visited {
   color: #FFFFFF;
 }
 footer a:hover, footer a:focus {
-  color: #f9a828;
+  color: #8d7249;
 }
 footer .row {
   max-width: 1024px;
@@ -2882,7 +2890,7 @@ footer h4.h05::after {
   background-color: rgba(0, 0, 0, 0.9);
 }
 .footer-main #mc-form button {
-  background-color: #f9a828;
+  background-color: #8d7249;
   color: #000000;
   width: 6rem;
   height: 6rem;
@@ -2894,7 +2902,7 @@ footer h4.h05::after {
   top: 0;
 }
 .footer-main #mc-form button:hover {
-  background-color: #f89e0f;
+  background-color: #8d7249;
 }
 .footer-main #mc-form button i {
   font-size: 2.6rem;
@@ -2904,7 +2912,7 @@ footer h4.h05::after {
   left: .2rem;
 }
 .footer-main #mc-form label {
-  color: #f9a828;
+  color: #8d7249;
   font-family: "montserrat-regular", sans-serif;
 }
 
